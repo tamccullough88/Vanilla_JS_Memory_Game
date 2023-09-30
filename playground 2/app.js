@@ -1,7 +1,22 @@
-const cards = document.querySelectorAll('.card');
+const gameGrid = document.querySelector(".game-grid");
 
-function flipCards(){
-    this.classList.toggle('flip')
-}
+let cards = []
 
-cards.forEach(cards => cards.addEventListener('click', flipCards))
+let firstCard, secondCard;
+
+let lockBoard = false;
+
+let score = 0
+
+document.querySelector(".score").textContent = score;
+
+
+
+
+// const cards = document.querySelectorAll('.card');
+
+// function flipCards(){
+//     this.classList.toggle('flip')
+// }
+
+// cards.forEach(cards => cards.addEventListener('click', flipCards))

@@ -38,14 +38,14 @@ p {
 
 .grid {
   background: rgb(248, 126, 3);
-  width: 800px;
-  height: 800px;
+  width: 750px;
+  height: 750px;
   margin: auto;
   display: grid;
   justify-content: center;
   grid-gap: 50px;
   grid-template-columns: repeat(4, 140px);
-  grid-template-rows: repeat(4, calc(100px / 5 * 7.5));
+  grid-template-rows: repeat(4, calc(92px / 5 * 7.5));
 }
 
 .card {
@@ -60,14 +60,15 @@ p {
   transition: transform 0.5s;
 }
 
-/* .card:active {
+.card:active {
   transform: scale(0.85);
   transition: transform 0.05s;
-} */
+}
 
 .front-image {
   width: 140px;
-  height: 90px;
+  height: 140px;
+  border-radius: 25px;
 }
 
 .card.flipped {
@@ -97,4 +98,8 @@ p {
   background-image: url("../Assets/Rest-In-Peace.jpg");
   background-position: center center;
   background-size: cover;
+}
+
+.card .front {
+  transform: rotateY(180deg);
 }

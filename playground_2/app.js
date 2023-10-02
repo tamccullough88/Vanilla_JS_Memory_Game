@@ -54,7 +54,9 @@ function generateCards() {
         `;
         gameGrid.appendChild(cardElement);
         cardElement.addEventListener("click", flipCard)
+
 }
+
 }
 
 

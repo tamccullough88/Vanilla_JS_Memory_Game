@@ -21,3 +21,7 @@ Plan:
 - create function to judge if cards match and hold if they do, reset if they don't
 - create score increase function within card flip function
 - create start/reset button/function
+
+citation:
+
+cards were made in canva, all graphics are from canva.

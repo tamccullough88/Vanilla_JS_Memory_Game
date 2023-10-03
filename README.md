@@ -21,12 +21,14 @@ Plan:
 - create function to judge if cards match and hold if they do, reset if they don't - done
 - create score increase function within card flip function - done
 - create start/reset button/function - done, start only
+- make turns function increase even when match is found
+- create function to display "you won" graphic when game is won
+- create function to display "you lost" when player reaches maximum number of turns
 
 extras
 
 - create turns counter - done
-- create function to display "you won" graphic when game is won
-- create function to display "you lost" when player reaches maximum number of turns
+
 - create function to play card flip sound when cards are flipped
 
 citation:

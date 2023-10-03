@@ -75,10 +75,6 @@ p {
   transition: transform 0.5s;
 }
 
-/* img {
-  visibility: hidden;
-} */
-
 .card:active {
   transform: scale(0.85);
   transition: transform 0.05s;
@@ -96,6 +92,7 @@ p {
   position: absolute;
   border-radius: 25px;
   background-color: #2b00a6;
+  backface-visibility: hidden;
 }
 
 .card .back {

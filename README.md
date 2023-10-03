@@ -12,15 +12,22 @@ I plan on rewriting completely based on what I learn from the two tutorials.
 
 Plan:
 
-- create grid for cards
-- place cards
-- style grid
-- style cards
-- create function to flip cards
-- creat function to shuffle cards(probable use fisher yates)
-- create function to judge if cards match and hold if they do, reset if they don't
-- create score increase function within card flip function
-- create start/reset button/function
+- create grid for cards - done
+- place cards - done
+- style grid - done
+- style cards - done
+- create function to flip cards - done
+- creat function to shuffle cards(probable use fisher yates) - done(with easier function)
+- create function to judge if cards match and hold if they do, reset if they don't - done
+- create score increase function within card flip function - done
+- create start/reset button/function - done, start only
+
+extras
+
+- create turns counter - done
+- create function to display "you won" graphic when game is won
+- create function to display "you lost" when player reaches maximum number of turns
+- create function to play card flip sound when cards are flipped
 
 citation:
 

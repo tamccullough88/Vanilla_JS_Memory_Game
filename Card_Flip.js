@@ -22,12 +22,17 @@ function startGame() {
 //function to end game after x number of turns
 
 function endGame() {
-    if (turns === 5) {
+    if (turns === 16) {
         document.querySelector(".restart").style.display= 'flex'
     gameGrid.style.display = 'none'
-    }
+    }}
 
-}
+    function winner() {
+        if (score === 8) {
+            document.querySelector(".winner").style.display= 'flex'
+            gameGrid.style.display = 'none'
+        }
+    }
 
 //function to restart game
 
@@ -39,9 +44,8 @@ function restartGame() {
     turns = 0;
     document.querySelector(".turns").textContent = turns
     document.querySelector(".restart").style.display= 'none'
+    document.querySelector(".winner").style.display= 'none'
     gameGrid.style.display = 'grid'
-
-
 }
 
 
@@ -92,18 +96,28 @@ function checkForMatch(){
 
     if (match === true) {
       disable()
+
     } else {
         resetCard()
-        endGame()
+
+        
+
     };
 
     if (match === true) {
         score++;
         document.querySelector(".score").textContent = score;
-        // shuffle();
+
+
     }
+    setTimeout(() => { 
+        endGame()}, 1000)
+    setTimeout(() => { 
+        winner()}, 1000)
+   
 
 }
+
 
 //function to reset cards if no match
 

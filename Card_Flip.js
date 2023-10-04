@@ -19,6 +19,33 @@ function startGame() {
 
 }
 
+//function to end game after x number of turns
+
+function endGame() {
+    if (turns === 5) {
+        document.querySelector(".restart").style.display= 'flex'
+    gameGrid.style.display = 'none'
+    }
+
+}
+
+//function to restart game
+
+function restartGame() {
+    shuffle();
+    resetCard();
+    score = 0;
+    document.querySelector(".score").textContent = score
+    turns = 0;
+    document.querySelector(".turns").textContent = turns
+    document.querySelector(".restart").style.display= 'none'
+    gameGrid.style.display = 'grid'
+
+
+}
+
+
+
 // function to flip cards
 
 card.forEach(card => card.addEventListener('click', cardFlip));
@@ -38,12 +65,14 @@ function cardFlip() {
     secondCard = this;
     lockBoard = true;
 
-    checkForMatch()
+   
 
     if (flippedCard === true) {
         turns++;
         document.querySelector(".turns").textContent = turns;
     }
+
+    checkForMatch()
 }
 
 
@@ -65,11 +94,13 @@ function checkForMatch(){
       disable()
     } else {
         resetCard()
+        endGame()
     };
 
     if (match === true) {
         score++;
         document.querySelector(".score").textContent = score;
+        // shuffle();
     }
 
 }

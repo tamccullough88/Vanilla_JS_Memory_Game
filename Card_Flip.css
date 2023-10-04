@@ -24,12 +24,26 @@ p {
 }
 
 .start {
-  visibility: disabled;
+  /* visibility: disabled; */
+
   background: rgb(248, 126, 3);
   width: 750px;
   height: 750px;
   margin: auto;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.restart {
+  /* visibility: disabled; */
+
+  background: rgb(248, 126, 3);
+  width: 750px;
+  height: 750px;
+  margin: auto;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -44,6 +58,14 @@ p {
 }
 
 .startButton button {
+  padding: 10px 16px;
+  font-size: 25px;
+  border-radius: 25px;
+  background-color: #1303ff;
+  color: white;
+}
+
+.restartButton button {
   padding: 10px 16px;
   font-size: 25px;
   border-radius: 25px;

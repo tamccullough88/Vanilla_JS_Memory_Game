@@ -5,7 +5,7 @@ const card = document.querySelectorAll(".card")
 let score = 0
 document.querySelector(".score").textContent = score
 let flippedCard = false
-let turns = 0
+let turns = 25
 document.querySelector(".turns").textContent = turns
 
 lockBoard = false
@@ -22,30 +22,41 @@ function startGame() {
 //function to end game after x number of turns
 
 function endGame() {
-    if (turns === 16) {
+
+
+    if (turns === 0) {
         document.querySelector(".restart").style.display= 'flex'
-    gameGrid.style.display = 'none'
-    }}
+    gameGrid.style.display = 'none';
+    }
+
+}
 
     function winner() {
         if (score === 8) {
             document.querySelector(".winner").style.display= 'flex'
             gameGrid.style.display = 'none'
         }
+        resetGameBoard()
     }
 
 //function to restart game
 
 function restartGame() {
+
+let flip = document.querySelectorAll('.card.flip');
+for (let i = 0; i < flip.length; i++) {
+    card.forEach(card => card.addEventListener('click', cardFlip))
+    flip[i].classList.remove('flip')
+}
+
     shuffle();
-    resetCard();
     score = 0;
-    document.querySelector(".score").textContent = score
-    turns = 0;
-    document.querySelector(".turns").textContent = turns
-    document.querySelector(".restart").style.display= 'none'
-    document.querySelector(".winner").style.display= 'none'
-    gameGrid.style.display = 'grid'
+    document.querySelector(".score").textContent = score;
+    turns = 25;
+    document.querySelector(".turns").textContent = turns;
+    document.querySelector(".restart").style.display= 'none';
+    document.querySelector(".winner").style.display= 'none';
+    gameGrid.style.display = 'grid';   
 }
 
 
@@ -69,10 +80,8 @@ function cardFlip() {
     secondCard = this;
     lockBoard = true;
 
-   
-
     if (flippedCard === true) {
-        turns++;
+        turns--;
         document.querySelector(".turns").textContent = turns;
     }
 
@@ -99,9 +108,6 @@ function checkForMatch(){
 
     } else {
         resetCard()
-
-        
-
     };
 
     if (match === true) {
@@ -110,11 +116,14 @@ function checkForMatch(){
 
 
     }
+
+    if (score === 8){
+        setTimeout(() => { 
+            winner()}, 1000)
+    } else {
     setTimeout(() => { 
         endGame()}, 1000)
-    setTimeout(() => { 
-        winner()}, 1000)
-   
+    }
 
 }
 
@@ -149,4 +158,6 @@ function shuffle(){
 }
 
 shuffle()
+
+console.log(document.querySelectorAll('.card'))
 

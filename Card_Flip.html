@@ -1,184 +1,119 @@
 <!DOCtype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta type="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thomas Project 1 Browser Game</title>
-    <link rel="stylesheet" type="text/css" href="Card_Flip.css" />
-  </head>
 
-  <body>
-    <h1>Card Flip Game</h1>
-    <section class="start">
-      <p class="startText">Press Start</p> 
-    </br> 
-  </br> 
-      <div class="startButton">
-        <button onclick="startGame()">Start</button>
-      </div>
-    </section>
-    <section class="restart">
-      <p class="startText">Try Again</p> 
-    </br> 
-  </br> 
-      <div class="restartButton">
-        <button onclick="restartGame()">Restart</button>
-      </div>
-    </section>
-    <section class="winner">
-      <img src="Assets\Winner.jpg" alt="winner image"/>
-      <button onclick="restartGame()">Restart</button>   
-      </div>
-    </section>
-    <section class="game-board hide">
-      <div class="card" data-type="candle">
-        <img class="back" src="Assets/candle.jpg" alt="back of card" />
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta type="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thomas Project 1 Browser Game</title>
+  <link rel="stylesheet" type="text/css" href="Card_Flip.css" />
+</head>
 
-      <div class="card" data-type="candle">
-        <img class="back" src="Assets/candle.jpg" alt="back of card" />
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
+<body>
+  <h1>Card Flip Game</h1>
+  <section class="start">
+    <p class="startText">Press Start</p>
+    </br>
+    </br>
+    <div class="startButton">
+      <button onclick="startGame()">Start</button>
+    </div>
+  </section>
+  <section class="restart">
+    <p class="startText">Try Again</p>
+    </br>
+    </br>
+    <div class="restartButton">
+      <button onclick="restartGame()">Restart</button>
+    </div>
+  </section>
+  <section class="winner">
+    <img src="Assets\Winner.jpg" alt="winner image" />
+    <button onclick="restartGame()">Restart</button>
+    </div>
+  </section>
+  <section class="game-board hide">
+    <div class="card" data-type="candle">
+      <img class="back" src="Assets/candle.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
 
-      <div class="card" data-type="candy">
-        <img class="back" src="Assets/candy.jpg" alt="back of card" />
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
+    <div class="card" data-type="candle">
+      <img class="back" src="Assets/candle.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
 
-      <div class="card" data-type="candy">
-        <img class="back" src="Assets/candy.jpg" alt="back of card"/>
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
+    <div class="card" data-type="candy">
+      <img class="back" src="Assets/candy.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
 
-      <div class="card" data-type="frank">
-        <img class="back" src="Assets/frank.jpg" alt="back of card"/>
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
-      <div class="card" data-type="frank">
-        <img class="back" src="Assets/frank.jpg" alt="back of card"/>
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
+    <div class="card" data-type="candy">
+      <img class="back" src="Assets/candy.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
 
-      <div class="card" data-type="ghost">
-        <img class="back" src="Assets/ghost.jpg" alt="back of card"/>
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
+    <div class="card" data-type="frank">
+      <img class="back" src="Assets/frank.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
+    <div class="card" data-type="frank">
+      <img class="back" src="Assets/frank.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
 
-      <div class="card" data-type="ghost">
-        <img class="back" src="Assets/ghost.jpg" alt="back of card"/>
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
+    <div class="card" data-type="ghost">
+      <img class="back" src="Assets/ghost.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
 
-      <div class="card" data-type="hand">
-        <img class="back" src="Assets/hand.jpg" alt="back of card"/>
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
+    <div class="card" data-type="ghost">
+      <img class="back" src="Assets/ghost.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
 
-      <div class="card" data-type="hand">
-        <img class="back" src="Assets/hand.jpg" alt="back of card"/>
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
+    <div class="card" data-type="hand">
+      <img class="back" src="Assets/hand.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
 
-      <div class="card" data-type="pumpkin">
-        <img class="back" src="Assets/pumpkin.jpg" alt="back of card"/>
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
+    <div class="card" data-type="hand">
+      <img class="back" src="Assets/hand.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
 
-      <div class="card" data-type="pumpkin">
-        <img class="back" src="Assets/pumpkin.jpg" alt="back of card"/>
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
+    <div class="card" data-type="pumpkin">
+      <img class="back" src="Assets/pumpkin.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
 
-      <div class="card" data-type="skull">
-        <img class="back" src="Assets/skull.jpg" alt="back of card"/>
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
+    <div class="card" data-type="pumpkin">
+      <img class="back" src="Assets/pumpkin.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
 
-      <div class="card" data-type="skull">
-        <img class="back" src="Assets/skull.jpg" alt="back of card" />
-        <img
-      
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
+    <div class="card" data-type="skull">
+      <img class="back" src="Assets/skull.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
 
-      <div class="card" data-type="zombie">
-        <img class="back" src="Assets/zombie.jpg" alt="back of card" />
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
+    <div class="card" data-type="skull">
+      <img class="back" src="Assets/skull.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
 
-      <div class="card" data-type="zombie">
-        <img class="back" src="Assets/zombie.jpg" alt="back of card" />
-        <img
-          class="front"
-          src="Assets/Rest-In-Peace.jpg"
-          alt="front of card"
-        />
-      </div>
-    </section>
-    <p>Score: <span class="score"></span></p>
-    <p>Turns: <span class="turns"></span></p>
+    <div class="card" data-type="zombie">
+      <img class="back" src="Assets/zombie.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
 
+    <div class="card" data-type="zombie">
+      <img class="back" src="Assets/zombie.jpg" alt="back of card" />
+      <img class="front" src="Assets/Rest-In-Peace.jpg" alt="front of card" />
+    </div>
+  </section>
+  <p>Score: <span class="score"></span></p>
+  <p>Turns: <span class="turns"></span></p>
+  <script src="Card_Flip.js"></script>
+</body>
 
-    <script src="Card_Flip.js"></script>
-  </body>
 </html>

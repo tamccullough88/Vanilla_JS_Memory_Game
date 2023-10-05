@@ -9,6 +9,7 @@ body {
   min-width: 100vw;
   background-color: #12181f;
 }
+
 h1 {
   text-align: center;
   font-weight: 700;
@@ -61,6 +62,7 @@ p {
 
   position: relative;
 }
+
 .startText {
   font-size: 75px;
 }
@@ -85,6 +87,7 @@ p {
   background-color: #1303ff;
   color: white;
 }
+
 .winner button {
   position: absolute;
   top: 85%;
@@ -94,6 +97,7 @@ p {
   background-color: #1303ff;
   color: white;
 }
+
 .game-board {
   background: rgb(248, 126, 3);
   width: 750px;

@@ -14,7 +14,7 @@ lockBoard = false
 //function to start the game on start button click
 
 function startGame() {
-    document.querySelector(".start").style.display= 'none'
+    document.querySelector(".start").style.display = 'none'
     gameGrid.style.display = 'grid'
 
 }
@@ -25,38 +25,38 @@ function endGame() {
 
 
     if (turns === 0) {
-        document.querySelector(".restart").style.display= 'flex'
-    gameGrid.style.display = 'none';
+        document.querySelector(".restart").style.display = 'flex'
+        gameGrid.style.display = 'none';
     }
 
 }
 
-    function winner() {
-        if (score === 8) {
-            document.querySelector(".winner").style.display= 'flex'
-            gameGrid.style.display = 'none'
-        }
-        resetGameBoard()
+function winner() {
+    if (score === 8) {
+        document.querySelector(".winner").style.display = 'flex'
+        gameGrid.style.display = 'none'
     }
+    resetGameBoard()
+}
 
 //function to restart game
 
 function restartGame() {
 
-let flip = document.querySelectorAll('.card.flip');
-for (let i = 0; i < flip.length; i++) {
-    card.forEach(card => card.addEventListener('click', cardFlip))
-    flip[i].classList.remove('flip')
-}
+    let flip = document.querySelectorAll('.card.flip');
+    for (let i = 0; i < flip.length; i++) {
+        card.forEach(card => card.addEventListener('click', cardFlip))
+        flip[i].classList.remove('flip')
+    }
 
     shuffle();
     score = 0;
     document.querySelector(".score").textContent = score;
     turns = 25;
     document.querySelector(".turns").textContent = turns;
-    document.querySelector(".restart").style.display= 'none';
-    document.querySelector(".winner").style.display= 'none';
-    gameGrid.style.display = 'grid';   
+    document.querySelector(".restart").style.display = 'none';
+    document.querySelector(".winner").style.display = 'none';
+    gameGrid.style.display = 'grid';
 }
 
 
@@ -100,11 +100,11 @@ function resetGameBoard() {
 
 //function to check for match, flip if no match, and disable flip if match
 
-function checkForMatch(){
+function checkForMatch() {
     let match = firstCard.dataset.type === secondCard.dataset.type
 
     if (match === true) {
-      disable()
+        disable()
 
     } else {
         resetCard()
@@ -117,12 +117,14 @@ function checkForMatch(){
 
     }
 
-    if (score === 8){
-        setTimeout(() => { 
-            winner()}, 1000)
+    if (score === 8) {
+        setTimeout(() => {
+            winner()
+        }, 1000)
     } else {
-    setTimeout(() => { 
-        endGame()}, 1000)
+        setTimeout(() => {
+            endGame()
+        }, 1000)
     }
 
 }
@@ -142,15 +144,15 @@ function resetCard() {
 //function to disable matching cards
 
 
-function disable(){
+function disable() {
     firstCard.removeEventListener('click', cardFlip)
     secondCard.removeEventListener('click', cardFlip)
     resetGameBoard()
-   }
+}
 
 //function to shuffle cards
 
-function shuffle(){
+function shuffle() {
     card.forEach(card => {
         let random = Math.floor(Math.random() * 16);
         card.style.order = random;

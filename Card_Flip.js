@@ -27,7 +27,9 @@ function endGame() {
     if (turns === 0) {
         document.querySelector(".restart").style.display = 'flex'
         gameGrid.style.display = 'none';
+        loserSound()
     }
+    
 
 }
 
@@ -37,6 +39,7 @@ function winner() {
         gameGrid.style.display = 'none'
     }
     resetGameBoard()
+    winnerSound()
 }
 
 //function to restart game
@@ -61,7 +64,7 @@ function restartGame() {
 
 
 
-// function to flip cards
+// function to flip cards. See citation 1
 
 card.forEach(card => card.addEventListener('click', cardFlip));
 function cardFlip() {
@@ -74,6 +77,7 @@ function cardFlip() {
     if (!flippedCard) {
         flippedCard = true
         firstCard = this;
+        playSound()
         return;
     }
 
@@ -83,12 +87,28 @@ function cardFlip() {
     if (flippedCard === true) {
         turns--;
         document.querySelector(".turns").textContent = turns;
+        playSound()
     }
+
 
     checkForMatch()
 }
 
+function playSound() {
+    new Audio("Assets/flipcard-91468.mp3").play();
+}
 
+function winnerSound() {
+    new Audio("Assets/game-bonus-144751.mp3").play();
+}
+
+function loserSound() {
+    new Audio("Assets/080556_quotyou-losequot-88884.mp3").play()
+}
+function correctMatchSound() {
+    new Audio("Assets/interface-124464.mp3").play()
+}
+// function to reset the game board. see citation 2
 
 function resetGameBoard() {
     flippedCard = false
@@ -105,7 +125,6 @@ function checkForMatch() {
 
     if (match === true) {
         disable()
-
     } else {
         resetCard()
     };
@@ -113,8 +132,10 @@ function checkForMatch() {
     if (match === true) {
         score++;
         document.querySelector(".score").textContent = score;
-
-
+        setTimeout(() => {
+            correctMatchSound()
+        }, 500)
+        
     }
 
     if (score === 8) {
@@ -126,11 +147,10 @@ function checkForMatch() {
             endGame()
         }, 1000)
     }
-
 }
 
 
-//function to reset cards if no match
+//function to reset cards if no match. see citation 3
 
 function resetCard() {
     setTimeout(() => {
@@ -138,10 +158,11 @@ function resetCard() {
         secondCard.classList.remove("flip")
         resetGameBoard()
     }, 1000);
+
 }
 
 
-//function to disable matching cards
+//function to disable matching cards. see citation 4
 
 
 function disable() {
@@ -150,7 +171,7 @@ function disable() {
     resetGameBoard()
 }
 
-//function to shuffle cards
+//function to shuffle cards. See citation number 
 
 function shuffle() {
     card.forEach(card => {
@@ -161,5 +182,4 @@ function shuffle() {
 
 shuffle()
 
-console.log(document.querySelectorAll('.card'))
 

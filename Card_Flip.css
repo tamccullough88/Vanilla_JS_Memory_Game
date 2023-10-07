@@ -119,12 +119,12 @@ p {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   border-radius: 25px;
   transform-style: preserve-3d;
-  transition: transform 0.5s;
+  transition: transform 0.75s;
 }
 
 .card:active {
   transform: scale(0.85);
-  transition: transform 0.05s;
+  transition: transform 0.5s;
 }
 
 .card.flip {

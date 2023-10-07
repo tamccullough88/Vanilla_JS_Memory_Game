@@ -4,14 +4,6 @@ JS game for Thrive DX Software Development Bootcamp.
 
 To play, click start, then select the cards to find a match. Get all 8 matches to win. If you don't get all 8 matches in 16 turns, you lose. Select restart to try again.
 
-using https://www.freecodecamp.org/news/vanilla-javascript-tutorial-build-a-memory-game-in-30-minutes-e542c4447eae/ by Marina Ferreira for reference and ideas on how to code.
-
-using https://dev.to/javascriptacademy/creating-a-memory-card-game-with-html-css-and-javascript-57g1 as more inspiration on code and styling.
-
-in playgroud 2, I used the Fisher Yates shuffle algorithm.
-
-I plan on rewriting completely based on what I learn from the two tutorials.
-
 Plan:
 
 - create grid for cards - done
@@ -34,6 +26,14 @@ extras
 - create function to play card flip sound when cards are flipped
 
 citation:
+
+using https://www.freecodecamp.org/news/vanilla-javascript-tutorial-build-a-memory-game-in-30-minutes-e542c4447eae/ by Marina Ferreira for reference and ideas on how to code.
+
+using https://dev.to/javascriptacademy/creating-a-memory-card-game-with-html-css-and-javascript-57g1 as more inspiration on code and styling.
+
+in playgroud 2, I used the Fisher Yates shuffle algorithm.
+
+I plan on rewriting completely based on what I learn from the two tutorials.
 
 cards and winning screen were made in canva, all graphics are from canva.
 

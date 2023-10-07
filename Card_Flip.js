@@ -5,7 +5,7 @@ const card = document.querySelectorAll(".card")
 let score = 0
 document.querySelector(".score").textContent = score
 let flippedCard = false
-let turns = 25
+let turns = 16
 document.querySelector(".turns").textContent = turns
 
 lockBoard = false
@@ -66,6 +66,11 @@ function restartGame() {
 
 // function to flip cards. See citation 1
 
+/* * Title: Memory Game In Vanilla JavaScript * Author:Ferreira,  M * Date: 2018 * Code Version: v1 *  Availability: https://github.com/code-sketch/memory-game/blob/master/video-11/scripts.js * */
+
+/* * Title: Creating a Memory Card Game with HTML, CSS, and JavaScript * Author: Nagy, A * Date: 2023 * Code Version: v1 *  Availability: https://github.com/javascriptacademy-stash/memory-card-game/blob/main/index.js* */
+
+
 card.forEach(card => card.addEventListener('click', cardFlip));
 function cardFlip() {
     if (lockBoard) return;
@@ -94,6 +99,8 @@ function cardFlip() {
     checkForMatch()
 }
 
+// functions to play sounds for card game
+
 function playSound() {
     new Audio("Assets/flipcard-91468.mp3").play();
 }
@@ -109,6 +116,11 @@ function correctMatchSound() {
     new Audio("Assets/interface-124464.mp3").play()
 }
 // function to reset the game board. see citation 2
+
+
+/* * Title: Memory Game In Vanilla JavaScript * Author:Ferreira,  M * Date: 2018 * Code Version: v1 *  Availability: https://github.com/code-sketch/memory-game/blob/master/video-11/scripts.js * */
+
+/* * Title: Creating a Memory Card Game with HTML, CSS, and JavaScript * Author: Nagy, A * Date: 2023 * Code Version: v1 *  Availability: https://github.com/javascriptacademy-stash/memory-card-game/blob/main/index.js* */
 
 function resetGameBoard() {
     flippedCard = false
@@ -152,6 +164,10 @@ function checkForMatch() {
 
 //function to reset cards if no match. see citation 3
 
+/* * Title: Memory Game In Vanilla JavaScript * Author:Ferreira,  M * Date: 2018 * Code Version: v1 *  Availability: https://github.com/code-sketch/memory-game/blob/master/video-11/scripts.js * */
+
+/* * Title: Creating a Memory Card Game with HTML, CSS, and JavaScript * Author: Nagy, A * Date: 2023 * Code Version: v1 *  Availability: https://github.com/javascriptacademy-stash/memory-card-game/blob/main/index.js* */
+
 function resetCard() {
     setTimeout(() => {
         firstCard.classList.remove("flip")
@@ -164,6 +180,10 @@ function resetCard() {
 
 //function to disable matching cards. see citation 4
 
+/* * Title: Memory Game In Vanilla JavaScript * Author:Ferreira,  M * Date: 2018 * Code Version: v1 *  Availability: https://github.com/code-sketch/memory-game/blob/master/video-11/scripts.js * */
+
+/* * Title: Creating a Memory Card Game with HTML, CSS, and JavaScript * Author: Nagy, A * Date: 2023 * Code Version: v1 *  Availability: https://github.com/javascriptacademy-stash/memory-card-game/blob/main/index.js* */
+
 
 function disable() {
     firstCard.removeEventListener('click', cardFlip)
@@ -171,7 +191,10 @@ function disable() {
     resetGameBoard()
 }
 
-//function to shuffle cards. See citation number 
+//function to shuffle cards. See citation number 5
+
+/* * Title: Memory Game In Vanilla JavaScript * Author:Ferreira,  M * Date: 2018 * Code Version: v1 *  Availability: https://github.com/code-sketch/memory-game/blob/master/video-11/scripts.js * */
+
 
 function shuffle() {
     card.forEach(card => {

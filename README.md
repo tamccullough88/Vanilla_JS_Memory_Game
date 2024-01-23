@@ -2,7 +2,7 @@
 
 JS game for Thrive DX Software Development Bootcamp.
 
-To play, click start, then select the cards to find a match. Get all 8 matches to win. If you don't get all 8 matches in 16 turns, you lose. Select restart to try again.
+To play, open index.html in your browser, click start, then select the cards to find a match. Get all 8 matches to win. If you don't get all 8 matches in 16 turns, you lose. Select restart to try again.
 
 Plan:
 

@@ -1,6 +1,6 @@
 const cards = document.querySelectorAll('.card');
 
-function flipCards(){
+function flipCards() {
     this.classList.toggle('flip')
 }
 

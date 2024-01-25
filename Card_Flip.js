@@ -55,7 +55,7 @@ function restartGame() {
     shuffle();
     score = 0;
     document.querySelector(".score").textContent = score;
-    turns = 25;
+    turns = 16;
     document.querySelector(".turns").textContent = turns;
     document.querySelector(".restart").style.display = 'none';
     document.querySelector(".winner").style.display = 'none';

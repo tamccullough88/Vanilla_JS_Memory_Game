@@ -1,0 +1,13 @@
+@import "pageText";
+@import "utilities";
+
+
+
+
+%btn {
+    padding: 10px 16px;
+    font-size: 25px;
+    border-radius: 25px;
+    background-color: button-color(true);
+    color: $color_3;
+}

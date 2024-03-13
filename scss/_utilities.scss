@@ -1,0 +1,56 @@
+$game_screen_background_color_1: rgb(248, 126, 3);
+$game_screen_text_color_2: rgb(0, 195, 26);
+$color_3: rgb(255, 255, 255);
+$background-color_1: #000000;
+$background-color_2: #1303ff;
+$background-color_3: #2b00a6;
+$shaddow-color: rgba(0, 0, 0, 0.5);
+
+@mixin cardFlip {
+    transform: rotateY(180deg);
+}
+
+@mixin gameScreens {
+    background: $game_screen_background_color_1;
+    width: 750px;
+    height: 750px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    color: text-color-picker($game_screen_background_color_1)
+}
+
+@mixin otherScreens {
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin cards {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    position: absolute;
+    border-radius: 25px;
+    background-color: $background-color_3;
+    backface-visibility: hidden;
+}
+
+@function text-color-picker($color) {
+    @if (lightness($color) < 40) {
+        @return $game_screen_background_color_1;
+    }
+
+    @else {
+        @return $game_screen_text_color_2
+    }
+}
+
+@function button-color($isPrimary) {
+    @if $isPrimary {
+        @return $background-color_2;
+    }
+
+    @else {
+        @return $color_3;
+    }
+}

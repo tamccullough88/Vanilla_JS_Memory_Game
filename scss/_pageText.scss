@@ -1,0 +1,35 @@
+@import "utilities";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: $background-color_1;
+    color: text-color-picker($background-color_1)
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+
+}
+
+h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px $shaddow-color;
+}
